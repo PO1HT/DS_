@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Расчет модуля упругости при растяжении</title>
+    </head>
+
+    <h1 align="center">Расчет модуля упругости при растяжении</h1>
+    
+    <form action="" method="post">  
+            <div><label for="mn">Соотношение матрица-наполнитель, МПа:</label><input type="float" name="mn" required></div>
+            <div><label for="plot">Плотность, кг/м3:</label><input type="float" name="plot" required></div>
+            <div><label for="mup">Модуль упругости, ГПа:</label><input type="float" name="mup" required></div>
+            <div><label for="ko">Количество отвердителя, м.%:</label><input type="float" name="ko" required></div>
+            <div><label for="seg">Содержание эпоксидных групп,%_2:</label><input type="float" name="seg" required></div>
+            <div><label for="tv">Температура вспышки, С_2:</label><input type="float" name="tv" required></div>
+            <div><label for="pp">Поверхностная плотность, г/м2:</label><input type="float" name="pp" required></div>
+            <div><label for="pr">Прочность при растяжении, МПа:</label><input type="float" name="pr" required></div>
+            <div><label for="ps">Потребление смолы, г/м2:</label><input type="float" name="ps" required></div>
+            <div><label for="shn">Шаг нашивки:</label><input type="float" name="shn" required></div>
+            <div><label for="pln">Плотность нашивки:</label><input type="float" name="pln" required></div>
+            <div class="calculate" align="left"><input type="submit" value="Получит расчет"></div></b>
+        </form>
+
+
+        <div class="result" align="left">
+            {% if message %}
+                <br><b><div>{{message}}</div></b>
+            {% endif %}
+        </div> 
+</html>
